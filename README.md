@@ -12,8 +12,8 @@ Controlar o acesso de até 8 usuários, com sinalizações visuais e sonoras, us
 
 ## 🎥 **Demonstração**
 
-[Ver Vídeo do Projeto](https://drive.google.com/file/d/1p-pWcr50rUCaT1JCv6CoL1GDCLoK-Oyz/view?usp=sharing)  
-*(Substituir pelo vídeo correto, se necessário)*
+[Ver Vídeo do Projeto](https://drive.google.com/file/d/1-v1h6rC1pmx5e1LECZpEIkMeguFnmjnc/view?usp=drive_link)  
+
 
 ---
 
