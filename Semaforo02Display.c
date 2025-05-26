@@ -105,9 +105,9 @@ void vTaskEntrada(void *params) {
             if (uxSemaphoreGetCount(xSemUsuarios) < MAX_USUARIOS) {
                 xSemaphoreGive(xSemUsuarios);
                 usuarios_ativos++;
-                atualizar_display("Entrada autorizada", usuarios_ativos);
+                atualizar_display("Entrada        autorizada", usuarios_ativos);
             } else {
-                atualizar_display("Capacidade cheia!", usuarios_ativos);
+                atualizar_display("Capacidade     cheia!", usuarios_ativos);
                 beep_buzzer(200, 1000);;
             }
             atualizar_led(usuarios_ativos);
@@ -122,7 +122,7 @@ void vTaskSaida(void *params) {
         if (gpio_get(BOTAO_SAIDA) == 0) {
             if (xSemaphoreTake(xSemUsuarios, 0) == pdTRUE && usuarios_ativos > 0) {
                 usuarios_ativos--;
-                atualizar_display("Saida autorizada", usuarios_ativos);
+                atualizar_display("Saida          autorizada", usuarios_ativos);
                 atualizar_led(usuarios_ativos);
             }
             vTaskDelay(pdMS_TO_TICKS(300));
@@ -138,7 +138,7 @@ void vTaskReset(void *params) {
                 xSemaphoreTake(xSemUsuarios, 0);
             }
             usuarios_ativos = 0;
-            atualizar_display("Reset do sistema", usuarios_ativos);
+            atualizar_display("Resetar sistema", usuarios_ativos);
             atualizar_led(usuarios_ativos);
             beep_buzzer(100, 1000);
             beep_buzzer(100, 1000);
